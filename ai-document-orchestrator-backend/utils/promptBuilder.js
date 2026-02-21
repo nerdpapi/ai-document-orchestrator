@@ -19,14 +19,10 @@ const buildExtractionPrompt = (documentText, userQuestion) => {
   """
   
   TASK:
-  1. Identify 5 to 8 highly relevant key-value pairs directly related to the user's question.
-2. Extract only factual information explicitly present in the document.
-3. Do NOT infer, assume, or hallucinate missing information.
-4. If information is not available, omit it.
-5. Keys must be concise, professional, and business-relevant.
-6. Values must be precise and directly copied or clearly derived from the document.
-7. Return ONLY valid JSON.
-8. Do NOT include explanations, markdown formatting, or extra text.
+  1. Identify the 8 to 10 most relevant key-value pairs related to the user's question.
+  2. Return strictly in valid JSON format.
+  3. Do NOT add explanation text.
+  4. Keys must be meaningful and business-relevant.
   
   Example format:
   {
